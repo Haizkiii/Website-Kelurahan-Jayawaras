@@ -1,0 +1,280 @@
+p {
+    font-size: 16px;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.whatsapp-floating {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 999;
+}
+
+.whatsapp-floating img {
+    width: 90px;
+    height: 90px;
+    display: block;
+}
+
+
+
+/* Styling navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    /* Menetapkan z-index navbar agar di atas elemen lain */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-text {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kelurahan {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.kabupaten {
+    font-size: 14px;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: #464646;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: blue;
+}
+
+.navbar-nav a.nav-link.active {
+    color: blue;
+}
+
+
+/* Styling halaman beranda atau carousel landing page */
+.container-fluid {
+    padding: 0;
+}
+
+
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-inner>.carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Memastikan foto memenuhi seluruh tinggi viewport */
+}
+
+.carousel-inner>.carousel-item>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    /* Memenuhi seluruh lebar dan tinggi carousel item */
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 76px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    margin-top: 76px;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 15;
+}
+
+.carousel-indicators li {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+/* Styling untuk profile page */
+.profile-section,
+.layanan-section {
+    margin-top: 76px;
+    padding: 40px;
+}
+
+.profile-section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-section h3 {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.profile-section p,
+.profile-section ol li {
+    color: #777;
+    line-height: 1.6;
+}
+
+.geografis-table tr td {
+    font-size: 15px;
+    color: #777;
+    padding: 7px;
+}
+
+.header-samping {
+    font-weight: bold;
+    color: #555;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .geografis-info {
+        flex-direction: column;
+    }
+
+    .geografis-photo {
+        max-width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .geografis-table td {
+        height: auto;
+    }
+}
+
+
+/* Layanan  page styling*/
+/* Custom styling for the active accordion header */
+.accordion-header button.accordion-button[aria-expanded="true"] {
+    background-color: #47494b;
+    color: #fafafa;
+}
+
+/* Custom styling for the arrow icon on the active accordion header */
+.accordion-header button.accordion-button[aria-expanded="true"]::after {
+    /* Adjust "white" to your desired arrow color */
+    color: white;
+}
+
+
+/* Galeri page styling */
+.galeri-section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.galeri-section {
+    margin-top: 76px;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.galeri-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeri-item {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.galeri-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+}
+
+
+.modal-content {
+    padding: 10px;
+}
+
+/* Styling untuk perangkat mobile */
+@media (max-width: 767px) {
+    .galeri-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Kependudukan Section */
+.kependudukan-section {
+    padding: 40px;
+    margin-top: 76px;
+    background-color: #f9f9f9;
+}
+
+.kependudukan-section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul {
+    padding-left: 40px;
+}
+
+
+.sub-list {
+    padding-left: 40px;
+}
